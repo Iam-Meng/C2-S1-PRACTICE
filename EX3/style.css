@@ -1,0 +1,164 @@
+:root {
+  --bg-1: #0f172a;
+  --bg-2: #064e3b; 
+  --text: #ffffff; 
+  --muted: rgba(255, 255, 255, 0.85);
+  --accent: #ffd166; 
+  --radius: 6px;
+  --container-width: 1100px;
+  --gap: 0.4rem; 
+  --font: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  --title-font: "Poppins", "Segoe UI", Roboto, system-ui, -apple-system,
+    "Helvetica Neue", Arial;
+}
+.nav {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0.5rem 1rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius);
+  transition: background 0.18s ease, color 0.12s ease, transform 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+}
+.nav a:hover,
+.nav a:focus {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.nav a:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 2px;
+}
+.nav a h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: inherit;
+}
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.container ul {
+  list-style: disc;
+  margin: 0.5rem 0 1rem 1.25rem;
+  padding: 0;
+  display: block;
+}
+.container li {
+  padding: 0.15rem 0;
+  color: var(--muted);
+  cursor: default;
+  border-radius: 0;
+  transition: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font);
+  background: linear-gradient(135deg, var(--bg-1) 10%, var(--bg-2) 90%);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0.5rem 0;
+}
+
+.container h1 {
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: 900;
+  color: #ffd166;
+  letter-spacing: 0.4px;
+}
+
+h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.05;
+  color: var(--text);
+}
+
+h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.05rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 0.75rem 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+footer {
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    width: min(var(--container-width), calc(100% - 2rem));
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+@media (max-height: 480px) {
+    footer { position: static; transform: none; margin-top: 1.25rem; }
+}
